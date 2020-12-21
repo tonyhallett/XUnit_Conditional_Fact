@@ -8,6 +8,7 @@
 You can provide your own skip logic if the default is not sufficient.</Description>
     <RepositoryUrl>https://github.com/tonyhallett/XUnit_Conditional_Fact</RepositoryUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageTags>Xunit skip skippable test</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
