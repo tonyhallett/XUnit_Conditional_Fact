@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net472;netcoreapp3.1;netcoreapp2.1;net5.0</TargetFrameworks>
+    <Authors>Tony Hallett</Authors>
+    <Description>An xunit attribute to provide skip functionality to any xunit test discoverer.  You specify the FactAttribute that you may potentially want to skip then apply ITestCondition attributes.  If a single attribute reports a non null SkipReason the test is skipped.  If the test is not skipped then the specified discoverer will run.
+
+You can provide your own skip logic if the default is not sufficient.</Description>
+    <RepositoryUrl>https://github.com/tonyhallett/XUnit_Conditional_Fact</RepositoryUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Reflection.Emit" Version="4.7.0" />
+    <PackageReference Include="xunit.extensibility.core" Version="2.4.1" />
+    <PackageReference Include="xunit.extensibility.execution" Version="2.4.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+      <_Parameter1>Test</_Parameter1>
+    </AssemblyAttribute>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+      <_Parameter1>DynamicProxyGenAssembly2</_Parameter1>
+    </AssemblyAttribute>
+
+  </ItemGroup>
+</Project>
